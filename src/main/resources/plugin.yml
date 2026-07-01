@@ -1,0 +1,47 @@
+name: ParticleWalls
+description: $description
+version: '${version}'
+
+main: net.sealing99.particlewalls.ParticleWalls
+api-version: '26.1.2'
+load: POSTWORLD
+
+authors: [ Sealing99 ]
+
+commands:
+  createwall:
+    description: Create a wall
+    usage: /createwall <id> <x> <y> <z> <x|z> <width> <height> <r> <g> <b>
+    permission: particlewalls.create
+
+  deletewall:
+    description: Delete a wall
+    usage: /deletewall <id>
+    permission: particlewalls.delete
+
+  modifywall:
+    description: Modify a wall
+    usage: /modifywall <id> <x> <y> <z> <x|z> <width> <height> <r> <g> <b>
+    permission: particlewalls.modify
+
+  stopwalls:
+    description: Stop rendering
+    usage: /stopwalls
+    permission: particlewalls.stop
+
+  restartwalls:
+    description: Restart rendering
+    usage: /restartwalls
+    permission: particlewalls.restart
+
+permissions:
+  particlewalls.create:
+    default: op
+  particlewalls.delete:
+    default: op
+  particlewalls.modify:
+    default: op
+  particlewalls.stop:
+    default: op
+  particlewalls.restart:
+    default: op
